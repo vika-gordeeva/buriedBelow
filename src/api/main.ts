@@ -55,7 +55,7 @@ updateDeclaration();
 
 
 apiRouter.post(
-  "/decrypt",
+  "/decryption",
   asyncHandler(async (req: Request, res: Response, next: any) => {
     let inputMsg = req.body.text || ""
     const inputMsgArray = (inputMsg as string).split(", ") || [];
@@ -72,11 +72,11 @@ apiRouter.post(
 );
 
 apiRouter.post(
-  "/encrypt",
+  "/encryption",
   asyncHandler(async (req: Request, res: Response, next: any) => {
     let inputMsg = req.body.text || ""
-    inputMsg = (inputMsg as string).replace(/\s/g, "");
-    // ?????????!!!!!!! signs!!!
+    inputMsg = (inputMsg as string).replace(/[^a-zA-Z]/g, "");
+    
     const inputMsgArray = (inputMsg as string).split("") || [];
     const decryptionArray = inputMsgArray.map((el) => {
       const indexInDeclaration = newDeclaration.findIndex((word) => {
