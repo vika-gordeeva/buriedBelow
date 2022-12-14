@@ -12,20 +12,16 @@ const updateDeclaration = () => {
   let first = declarationArray.slice(0, 154);
   let second = declarationArray.slice(154, declarationArray.length);
   newDeclaration = [...first, "a", ...second];
-  console.log("LENGTH1", newDeclaration.length);
 
   //task2
   first = newDeclaration.slice(0, 245);
   second = newDeclaration.slice(246, newDeclaration.length);
   newDeclaration = [...first, ...second];
-  console.log("SECOND task", newDeclaration[newDeclaration.length - 1]);
-  console.log("LENGTH2", newDeclaration.length);
 
   //task3
   first = newDeclaration.slice(0, 480);
   second = newDeclaration.slice(490, newDeclaration.length);
   newDeclaration = [...first, ...second];
-  console.log("LENGTH3", newDeclaration.length);
 
   //task4
   first = newDeclaration.slice(0, 629);
@@ -35,7 +31,6 @@ const updateDeclaration = () => {
   second = [...slice];
   let third = newDeclaration.slice(654, newDeclaration.length);
   newDeclaration = [...first, ...second, ...third];
-  console.log("LENGTH4", newDeclaration.length);
 
   //task5
   first = newDeclaration.slice(0, 660);
@@ -43,12 +38,10 @@ const updateDeclaration = () => {
   slice = newDeclaration.slice(660, 805);
   third = newDeclaration.slice(805, newDeclaration.length);
   newDeclaration = [...first, ...second, ...third];
-  console.log("LENGTH5", newDeclaration.length);
 
   //task6 and task7
   newDeclaration.splice(810, 1, "y");
   newDeclaration.splice(1004, 1, "x");
-  console.log("LENGTH6", newDeclaration.length);
 };
 
 updateDeclaration();
